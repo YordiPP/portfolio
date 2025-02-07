@@ -13114,10 +13114,14 @@ body.sal-disabled [data-sal|=flip] {
   justify-content: center;
   align-items: center;
   position: relative;
+  max-width: 100%;
+  height: auto;
 }
 .bg-benner-img-six img {
   border: 2px solid var(--color-primary);
   border-radius: 100%;
+  max-width: 100%;
+  height: auto;
 }
 .bg-benner-img-six::after {
   content: url("../../assets/images/banner/banner-six-shape.png");
@@ -24523,3 +24527,136 @@ body.tmp-white-version.color-primary-3rd .services-widget.v2 .active-bg {
   color: #3d3d3d !important;
 }
 /*# sourceMappingURL=../maps/style.css.map */
+
+/* Algemeen Styling voor de Blog Week Vakjes */
+.blog-weekly-archive {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center; /* Zorgt ervoor dat de container gecentreerd is */
+  width: 100%;
+}
+
+.blog-weekly-archive .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centreert de weekvakjes in de container */
+  width: 100%;
+}
+
+.blog-weekly-archive .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centreert de weekvakjes in de rij */
+  width: 100%;
+  gap: 20px; /* Ruimte tussen de weekcards */
+}
+
+/* Week Card Styling */
+.blog-weekly-archive .week-card {
+  width: 100%;  /* Zorgt dat de card altijd binnen zijn container blijft */
+  max-width: 850px;  /* Maximaliseer de breedte van de card */
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Hover Effect */
+.blog-weekly-archive .week-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Afbeelding Styling */
+.blog-weekly-archive .week-card .img-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Week Card Content Styling */
+.blog-weekly-archive .week-card-content {
+  padding: 10px;
+}
+
+.blog-weekly-archive .week-title {
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.blog-weekly-archive .week-date {
+  font-size: 1.8rem;
+  color: #EEEEEE;
+  margin-bottom: 10px;
+}
+
+.blog-weekly-archive .week-description {
+  font-size: 0.9rem;
+  color: #d52222;
+  margin-bottom: 10px;
+}
+
+/* Read More Button Styling */
+.blog-weekly-archive .read-more-btn {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.blog-weekly-archive .read-more-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Verborgen Blog Content Styling */
+.blog-weekly-archive .full-blog-content {
+  display: none;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: white;
+  color: black !important;  /* Zwarte tekst */
+  border-left: 5px solid #007BFF;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.blog-weekly-archive .full-blog-content h3,
+.blog-weekly-archive .full-blog-content p {
+    color: black !important;
+}
+
+/* Media Queries voor Responsiviteit */
+@media (max-width: 768px) {
+  .blog-weekly-archive .week-card {
+    width: 100%;  /* Zorgt ervoor dat de cards het volledige scherm gebruiken */
+    margin: 10px 0;  /* Voeg ruimte toe tussen de cards */
+  }
+
+  .blog-weekly-archive .week-title {
+    font-size: 2rem;  /* Kleinere titel op mobiele schermen */
+  }
+
+  .blog-weekly-archive .week-date {
+    font-size: 1.5rem;  /* Kleinere datum op mobiele schermen */
+  }
+
+  .blog-weekly-archive .read-more-btn {
+    font-size: 1rem;  /* Kleinere knop op mobiele schermen */
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-weekly-archive .week-title {
+    font-size: 1.8rem;  /* Nog kleinere titel voor kleine schermen */
+  }
+
+  .blog-weekly-archive .week-date {
+    font-size: 1.3rem;  /* Nog kleinere datum voor kleine schermen */
+  }
+}
