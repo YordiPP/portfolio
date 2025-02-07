@@ -4,7 +4,6 @@ Om conflicten te vermijden en overzichtelijk te werken, volg je deze stappen:
 
 ## 📥 1. Altijd Eerst de Nieuwste Code Ophalen  
 Voordat je aanpassingen maakt, zorg dat je de nieuwste versie van `main` hebt:  
-```sh
 git checkout main  
 git pull origin main
 
